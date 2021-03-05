@@ -1,0 +1,5 @@
+布局为什么会加载到Activity，LayoutInflate
+
+//MeasureSpec.AT_MOST：在布局中指定了wrap_content
+//MeasureSpec.EXACTLY：在布局中指定了确却的值，200，或者match_parent/fill_parent
+//MeasureSpec.UNSPECIFIED：尽可能的大，很少用到，ListView+ScrollView会显示不全的问题，为什么？

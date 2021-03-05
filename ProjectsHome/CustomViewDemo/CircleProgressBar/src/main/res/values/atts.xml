@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgressBar">
+        <attr name="outerBorderWidth" format="dimension" />
+        <attr name="innerBorderWidth" format="dimension" />
+        <attr name="outerBorderColor" format="color|reference" />
+        <attr name="innerBorderColor" format="color|reference" />
+        <attr name="mText" format="string" />
+        <attr name="mTextColor" format="color|reference" />
+        <attr name="mTextSize" format="dimension" />
+    </declare-styleable>
+</resources>

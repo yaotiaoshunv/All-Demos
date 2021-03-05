@@ -1,0 +1,11 @@
+    public ClassName(Context context) {
+        this(context, null);
+    }
+
+    public ClassName(Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public ClassName(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }

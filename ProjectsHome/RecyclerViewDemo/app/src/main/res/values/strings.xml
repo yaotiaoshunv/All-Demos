@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RecyclerViewDemo</string>
+    <string name="list_view_style">ListView效果</string>
+    <string name="grid_view_style">GridView效果</string>
+    <string name="stagger_style">瀑布效果</string>
+    <string name="vertical_stander">垂直标准</string>
+    <string name="vertical_reverse">垂直反向</string>
+    <string name="horizontal_stander">水平标准</string>
+    <string name="horizontal_reverse">水平反向</string>
+    <string name="text_title">这是第一条</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorTrackTextView">
+        <attr name="originColor" format="color|reference" />
+        <attr name="changeColor" format="color|reference" />
+    </declare-styleable>
+</resources>

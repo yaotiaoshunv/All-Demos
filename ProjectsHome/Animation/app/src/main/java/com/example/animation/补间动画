@@ -1,0 +1,69 @@
+在正式使用补间动画之前，我们先来看一下它的分类，好有个整体的概念。
+
+1、补间动画的分类
+Android中的补间动画可以分为五大类：透明、缩放、位移、旋转、以及其他四种的组合。下面一一介绍：
+AlphaAnimation:透明度渐变动画，对应标签<alpha>，
+ScaleAnimation:缩放渐变动画
+TranslateAnimation:位移渐变动画
+RotateAnimation:旋转渐变动画
+AnimationSet:
+
+另外，还需认识一个新的概念，Interpolator（插值器）。
+2、Interpolator
+它是用来控制动画变化速度的，我们可以使用Android为提供的实现，也可自己实现Interpolator接口，以自行控制动画的变化速度。
+下面来看一下Android为我们提供的实现类（几个常见的）：
+LinearInterpolator：动画以均匀的速度改变
+AccelerateInterpolator：开始慢，然后加速
+DecelerateInterpolator：在动画开始的地方改变速度较快，然后开始减速
+AccelerateDecelerateInterpolator：在动画开始、结束的地方改变速度较慢，中间时加速
+CycleInterpolator：动画循环播放特定次数，变化速度按正弦曲线改变： Math.sin(2 * mCycles * Math.PI * input)
+AnticipateInterpolator：反向，先向相反方向改变一段再加速播放
+AnticipateOvershootInterpolator：开始的时候向后然后向前甩一定值后返回最后的值
+BounceInterpolator： 跳跃，快到目的值时值会跳跃，如目的值100，后面的值可能依次为85，77，70，80，90，100
+OvershootInterpolator：回弹，最后超出目的值然后缓慢改变到目的值
+
+在使用xml创建动画时，使用属性：android:interpolator 来设置。
+LinearInterpolator 对应 @android:anim/linear_interpolator...
+
+3、下面来看下这五种动画的示例，之后再对动画的属性做一个总结：
+示例：
+
+4、属性总结
+要学好动画，必须把动画所拥有的所有属性都掌握。
+之后才能灵活变通、达到随心所欲的境界，从而构建出更加复杂的动画效果。
+
+5、动画状态的监听
+通过
+animation.setAnimationListener(new Animation.AnimationListener())
+设置监听，重写下面三个方法即可：
+onAnimationStart()：动画开始
+onAnimationRepeat()：动画重复
+onAnimationEnd()：动画结束
+
+6、动态加载动画效果
+前面讲了静态加载动画：
+1）创建xml动画
+2）加载动画
+AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+3）给图片添加动画
+img_show.startAnimation(animation);
+
+和动态创建View一个道理，我们也可以动态创建动画。
+1)创建动画
+Animation animation1 = new AlphaAnimation(0,1);
+2)配置动画
+animation1.setDuration(2000);
+3）使用动画
+img_show.startAnimation(animation1);
+
+7、为Activity设置动画
+start_ctrl = (LinearLayout) findViewById(R.id.start_ctrl);
+//设置动画，从自身位置的最下端向上滑动了自身的高度，持续时间为5000ms
+final TranslateAnimation ctrlAnimation = new TranslateAnimation(
+        TranslateAnimation.RELATIVE_TO_SELF, 1, TranslateAnimation.RELATIVE_TO_SELF, 0,
+        TranslateAnimation.RELATIVE_TO_SELF, 1, TranslateAnimation.RELATIVE_TO_SELF, 0);
+ctrlAnimation.setDuration(5000);
+start_ctrl.setVisibility(View.VISIBLE);
+start_ctrl.startAnimation(ctrlAnimation);
+
+8、为Fragment设置动画

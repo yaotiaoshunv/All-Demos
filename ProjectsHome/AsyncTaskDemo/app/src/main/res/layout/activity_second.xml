@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ProgressBar
+        android:id="@+id/pr1"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    //进度条
+    <ProgressBar
+        android:id="@+id/pr2"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="点击下载"
+        android:textSize="50sp" />
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="点击下载"
+        android:textSize="50sp" />
+
+</LinearLayout>

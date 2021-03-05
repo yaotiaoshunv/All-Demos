@@ -1,0 +1,3 @@
+include ':SayHotFixPro'
+include ':app'
+rootProject.name = "DexClassLoaderHotFix"

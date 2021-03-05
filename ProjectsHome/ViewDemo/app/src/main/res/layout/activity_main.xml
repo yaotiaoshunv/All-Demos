@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lzw.viewdemo.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff00"
+        app:myText="自定义TextViewgg"
+        app:textSize="50sp"
+        app:textColor="#000000" />
+
+</LinearLayout>

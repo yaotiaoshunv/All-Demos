@@ -1,0 +1,3 @@
+include ':SynchronizedTest'
+include ':app'
+rootProject.name = "StarPro"

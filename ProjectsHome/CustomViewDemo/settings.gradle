@@ -1,0 +1,9 @@
+include ':LetterSideBar'
+include ':RatingBar'
+include ':LoadingView'
+include ':TextView'
+include ':ColorTrackTextView'
+include ':QQStepView'
+include ':CircleProgressBar'
+include ':app'
+rootProject.name = "CustomViewDemo"

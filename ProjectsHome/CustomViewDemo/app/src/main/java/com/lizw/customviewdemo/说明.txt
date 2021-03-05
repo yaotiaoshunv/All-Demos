@@ -1,0 +1,27 @@
+一、自定义TextView实践。
+写于：2021/2/25
+
+二、自定义QQStepView。
+1、分解需求（效果）
+2、看是否需要自定义属性。若需要，确定自定义属性
+源码分析：从invalidate()到onDraw()。（未完成）
+写于：2021/2/26
+
+三、自定义ColorTrackTextView。（字体变色）
+1、ColorTrackTextView与ViewPager结合使用。
+写于：2021/3/1  2021/3/2
+
+四、自定义CircleProgressBar
+写于：2021/3/2
+
+五、自定义LoadingView
+写于：2021/3/2
+
+六、自定义RatingBar（评分控件）
+效果实现思路分析：
+1、初始化的效果
+2、交互（onTouch()）时的效果
+写于：2021/3/3
+
+七、自定义LetterSideBar
+写于：2021/3/4
